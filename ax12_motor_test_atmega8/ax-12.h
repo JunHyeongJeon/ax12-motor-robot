@@ -77,4 +77,6 @@ void TxD(unsigned char MoterID ,unsigned char Length);
 void MOTOR_Move(unsigned char MoterID ,unsigned int Position,unsigned int Speed);
 void Multi_Move0(unsigned char N);
 
+
+
 #endif /* AX-12_H_ */

@@ -20,15 +20,15 @@ SIGNAL(SIG_UART_RECV){// usart receive interrupt
 	}
 	else if(buffer == 'z'){
 		int i;
-		for (i =0; i < 200; i ++){
-			MOTOR_Move(i, 500, 500 );
-		}
+	//	for (i =0; i < 254; i ++){
+			MOTOR_Move(254, 500, 200 );
+	//	}
 	}
 	else if(buffer == 'x'){
 		int i;
-		for (i =0; i < 200; i ++){
-			MOTOR_Move(i, 300, 500 );
-		}
+	//	for (i =0; i < 254; i ++){
+			MOTOR_Move(254, 300, 200 );
+	//	}
 	}
 
 

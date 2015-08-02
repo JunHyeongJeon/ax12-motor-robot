@@ -2,7 +2,7 @@
 #include "usart.h"
 #include "ax-12.h"
 #include <util/delay.h>
-
+#include "test.h"
 
 void setup()
 {
