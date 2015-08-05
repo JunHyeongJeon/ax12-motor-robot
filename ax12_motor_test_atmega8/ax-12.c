@@ -69,3 +69,9 @@ void Multi_Move0(unsigned char N)
     }
     USART_Transmit(~(CheckSum));
 }  
+void MOTOR_Move_With_RxTx_Control(unsigned char MoterID ,unsigned int Position,unsigned int Speed){
+	PORTD = (1<<PD2);
+	MOTOR_Move(MoterID, Position, Speed );
+	_delay_ms(3);
+	PORTD = (0<<PD2);
+}

@@ -8,14 +8,17 @@ void setup()
 {
 	
 	GPIO_init();
-	USART_Init();
+	USART_Init(115200);
 	
 	SYSTEM_Log("START");
 }
+
 void loop()
 {
+//	MOTOR_Move_With_RxTx_Control(1, 300, 200 );
 //	_delay_ms(16000); // 1s, this is complier error.
-
+//	MOTOR_Move_With_RxTx_Control(1, 500, 200 );
+//	_delay_ms(16000);
 }
 
 

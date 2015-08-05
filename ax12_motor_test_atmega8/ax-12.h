@@ -2,6 +2,7 @@
 #define AX-12_H_
 
 #include "usart.h"
+#include <util/delay.h>
 
 #define ON 1
 #define OFF 0
@@ -76,7 +77,7 @@
 void TxD(unsigned char MoterID ,unsigned char Length);
 void MOTOR_Move(unsigned char MoterID ,unsigned int Position,unsigned int Speed);
 void Multi_Move0(unsigned char N);
-
+void MOTOR_Move_With_RxTx_Control(unsigned char MoterID ,unsigned int Position,unsigned int Speed);
 
 
 #endif /* AX-12_H_ */

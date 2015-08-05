@@ -21,13 +21,14 @@ SIGNAL(SIG_UART_RECV){// usart receive interrupt
 	else if(buffer == 'z'){
 		int i;
 	//	for (i =0; i < 254; i ++){
-			MOTOR_Move(254, 500, 200 );
+		
+			MOTOR_Move_With_RxTx_Control(254, 500, 200 );
 	//	}
 	}
 	else if(buffer == 'x'){
 		int i;
 	//	for (i =0; i < 254; i ++){
-			MOTOR_Move(254, 300, 200 );
+			MOTOR_Move_With_RxTx_Control(254, 300, 200 );
 	//	}
 	}
 

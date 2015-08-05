@@ -27,14 +27,27 @@ char USART_Receive(void)
 	return UDR;
 }
 
-void USART_Init()
+void USART_Init(double BPS)
 {
 
     UCSRA = 0x00;
     UCSRB = 0xd8;
-    UCSRC = 0x06;
-	UBRRH = 0;
-    UBRRL = 8;
+	if( BPS == 9600){
+	    
+		UCSRC=0x86;
+		UBRRL=103;
+	}
+	else if( BPS == 57600){
+		UCSRC=0x86;
+//		UBRRH = 0;
+		UBRRL=3;
+	}
+	else{
+		UCSRC = 0x06;
+		UBRRH = 0;
+	    UBRRL = 8;
+	}
+
 	SREG |= 0x80;
 
 }
